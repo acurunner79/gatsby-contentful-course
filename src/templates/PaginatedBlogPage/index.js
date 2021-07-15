@@ -13,7 +13,7 @@ const PaginatedBlogPage = ({pageContext}) => {
                 {pageContext.posts.map((post) => (
                     <Post key={post.contentful_id}>
                         <div>
-                            <Link to={post.slug}>{post.title}</Link>
+                            <Link to={`/${pageContext.blogSlug}/${post.slug}`}>{post.title}</Link>
                         </div>
                         <div>{post.description}</div>
                         <div>
